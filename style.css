@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Arsenal|Bungee+Shade|Indie+Flower|Lato|Open+Sans');
+
+
+
+h1 {
+    text-align: center;
+    font-family: "Indie Flower";
+    font-size: 3.5em;
+    letter-spacing: -2px;
+    margin-bottom:;
+}
+
+#wrapper {
+    width: 30em;
+    margin: auto;
+    background-color: #2dad9a;
+    height: 25em;
+    overflow: hidden;
+    border-radius: 5em;
+    box-shadow: 0 0 20px;
+
+}
+
+li {
+    display: inline;
+    font-size: 2em;
+}
+
+ul {
+    text-align: center;
+    font-family: "Bungee Shade";
+    background-color: #24665c;
+    width: 16em;
+    height: 10em;
+    margin: 3em auto;
+    padding-top: 3em;
+    border-radius: 5em;
+
+  }
+
+.unit {
+  font-family: "Bungee Shade";
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.number {
+    font-family: "Lato";
+    font-size: 4em;
+}
+
+#submit {
+    position: relative;
+    top: 2.3em;
+}
+
+#timerInput {
+    margin-left: 15.5em;
+    margin-bottom: 15em;
+    background-color: #0e423d;
+    height: 2.2em;
+    width: 7em;
+    text-align: center;
+
+
+}
+
+
+
+input {
+    border-radius: 5px;
+    font-family: "Lato";
+    font-weight: bold;
+    color:#58efb8;
+}
+
+
+#submit {
+    background-color: #24665c;
+    margin-top: -1.8em;
+}
+
+#play {
+  position: relative;
+  top: 4em;
+  right:8em;
+  background-color: #24665c;
+  border: none;
+}
+
+#play img {
+    height: 2em;
+    width: 2em;
+}
+
+#reset img {
+    height: 2em;
+    width: 2em;
+}
+
+#reset {
+  position: relative;
+  top: 4em;
+  right: 6em;
+  background-color: #24665c;
+  border: none;
+}
+
+#reset, #play {
+    cursor: pointer;
+}
