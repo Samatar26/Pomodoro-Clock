@@ -55,7 +55,7 @@ ul {
 }
 
 #timerInput {
-    margin-left: 15.5em;
+    margin-left: 12em;
     margin-bottom: 15em;
     background-color: #0e423d;
     height: 2.2em;
@@ -64,6 +64,14 @@ ul {
 
 
 }
+
+#breakLength {
+  background-color: #0e423d;
+  height: 2.2em;
+  width: 7em;
+  text-align: center;
+}
+
 
 
 
@@ -83,7 +91,7 @@ input {
 #play {
   position: relative;
   top: 4em;
-  right:8em;
+  right:12em;
   background-color: #24665c;
   border: none;
 }
@@ -101,7 +109,7 @@ input {
 #reset {
   position: relative;
   top: 4em;
-  right: 6em;
+  right: 10em;
   background-color: #24665c;
   border: none;
 }
