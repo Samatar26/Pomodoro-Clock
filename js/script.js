@@ -8,17 +8,12 @@ var seconds = document.getElementById("seconds");
 var breaks = document.getElementById("breakLength");
 var timeInput;
 var changer;
-var stopLoop;
-
+var alt = "reset";
 //Timer function
 function start() {
-
-  //stop the Loop
-
   var timeInput = time.value;
   var breakLength = breaks.value;
 if (minutes.innerHTML ==="00" && seconds.innerHTML==="00" && time.value>0 && breaks.value>0){
-
 
     var miliseconds = (time.value)*60000;
 
@@ -29,8 +24,18 @@ if (minutes.innerHTML ==="00" && seconds.innerHTML==="00" && time.value>0 && bre
 
 //Timer Interval
   var timer =   setInterval(function() {
+
+
       if (minutes.innerHTML== 0 && seconds.innerHTML == 0) {
-          clear();
+        (function clear() {
+
+            clearInterval(timer);
+            minutes.innerHTML = "00";
+            seconds.innerHTML = "00";
+            start();
+            console.log("Loop");
+
+        }());
       }
 
       else if (seconds.innerHTML==="00" || seconds.innerHTML == 0) {
@@ -47,28 +52,24 @@ if (minutes.innerHTML ==="00" && seconds.innerHTML==="00" && time.value>0 && bre
     }, 1000);
 
   // Clear InterVal
-  function clear() {
-    if (stopLoop==="a") {
-        stopLoop==="b";
-        return;
-    }
-      clearInterval(timer);
-      minutes.innerHTML = "00";
-      seconds.innerHTML = "00";
-      start();
-      console.log("Loop");
 
-  }
 }
 }
 
 
 
 
-
-
+function stopTimer() {
+    minutes.innerHTML="00";
+    seconds.innerHTML ="00";
+    time.value=0;
+    breaks.value=0;
+    changer=0;
+    start();
+}
 
 
 //Event Listeners
 play.addEventListener("click", start);
+reset.addEventListener("click", stopTimer);
 }
