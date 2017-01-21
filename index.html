@@ -15,13 +15,13 @@
     <h1>Pomodoro Clock</h1>
     <div id="wrapper">
       <ul>
-        <li class="number">00</li>
+        <li class="number" id="minutes">00</li>
         <li class="unit">M</li>
-        <li class="number">00</li>
+        <li class="number" id="seconds" value=0>00</li>
         <li class="unit">S</li>
       </ul>
       <div id="submit">
-        <input id="timerInput" name="timerInput" >
+        <input id="timerInput" name="timerInput" type="number" value=""/>
         <button id="play"><img src="assets/375.png"/></button>
         <button id="reset"><img src="assets/stop-button_318-28623.png"/></button>
       </div>
