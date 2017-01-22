@@ -8,7 +8,7 @@ var seconds = document.getElementById("seconds");
 var breaks = document.getElementById("breakLength");
 var timeInput;
 var changer;
-var alt = "reset";
+var changerTwo;
 //Timer function
 function start() {
   var timeInput = time.value;
@@ -18,9 +18,16 @@ if (minutes.innerHTML ==="00" && seconds.innerHTML==="00" && time.value>0 && bre
     var miliseconds = (time.value)*60000;
 
     changer = changer === timeInput ? breakLength : timeInput;
+    changerTwo = changerTwo === 1 ? 2 : 1;
     minutes.innerHTML = changer;
-    console.log(changer);
-    console.log(breakLength);
+    if (changerTwo===1) {
+      minutes.style.color="black";
+      seconds.style.color="black";
+    }
+    else {
+      minutes.style.color="#ff5e5e";
+      seconds.style.color="#ff5e5e";
+    }
 
 //Timer Interval
   var timer =   setInterval(function() {
@@ -33,7 +40,6 @@ if (minutes.innerHTML ==="00" && seconds.innerHTML==="00" && time.value>0 && bre
             minutes.innerHTML = "00";
             seconds.innerHTML = "00";
             start();
-            console.log("Loop");
 
         }());
       }
@@ -65,6 +71,10 @@ function stopTimer() {
     time.value=0;
     breaks.value=0;
     changer=0;
+    changerTwo = 0;
+    minutes.style.color="black";
+    seconds.style.color="black";
+
     start();
 }
 
