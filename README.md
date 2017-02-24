@@ -1,1 +1,1 @@
-# Pomodoro-Clock - https://www.samatar26.github.io/Pomodoro-Clock
+# Pomodoro-Clock - https://samatar26.github.io/Pomodoro-Clock
